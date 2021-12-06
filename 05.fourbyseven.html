@@ -6,7 +6,7 @@ https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#16
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Four by Seven </title>
+	<title> Four by Seven </title>
 </head>
 <body onload="draw()">
 	<!-- https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#5.0
@@ -37,26 +37,8 @@ https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#16
 				//	2. get the context from your canvas element (which is what we’ll be using to draw)
 
 			// DRAW STUFF HERE!
-			for (var c = 1; c => 7; c++){ //outer loop
-				for (var r = 1; r <= 4; r++) { //inner loop
-					context.beginPath();
-					context.arc((r * 50), (c * 50), 20, 0, 2 * Math.PI, true);
-					context.closePath();
-					context.fill();
-					// CIRCLE: https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#13.0
-						// context.beginPath();
-						// context.arc(x, y, radius, start angle, end angle, clockwise);
-						// context.closePath();
-						// context.fill();
-				}
 
-			}
-
-
-				}
-
-
-			context.fillStyle = "#00ff00";
+			context.fillStyle = "#01B1E0";
 			// FILL SHAPES WITH COLORS:
 			// https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#15.0
 				// context.fillStyle = "#00ff00"
@@ -69,7 +51,19 @@ https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#16
 				// https://color.adobe.com/create
 				// or: https://htmlcolorcodes.com/
 
-
+				for (var c = 1; c <= 7; c++) { // outer loop (refers to columns, or incrementing DOWN the canvas)
+					for (var r = 1; r <= 4; r++) { // inner loop (revers to rows, or incremeenting RIGHTWARD of the canvas)
+						context.beginPath();
+						context.arc((r * 55), (c * 55), 20, 0, 2 * Math.PI, true);
+						context.closePath();
+						context.fill();
+						// CIRCLE: https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#13.0
+							// context.beginPath();
+							// context.arc(x, y, radius, start angle, end angle, clockwise);
+							// context.closePath();
+							// context.fill();
+					}
+				}
 		}
 
 	</script>

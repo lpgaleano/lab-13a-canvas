@@ -2,17 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title> circle boundary</title>
+    <title>Circle Boundary</title>
     <style>
       #sketch {
-        border 1px solid #000;
+        border: 1px solid #000;
       }
-
     </style>
   </head>
   <body>
 
-    <canvas id="canvas" width="480" height="720"></canvas>
+    <canvas id="sketch" width="480" height="720"></canvas>
 
     <script>
       document.addEventListener("DOMContentLoaded", main);
@@ -27,27 +26,26 @@
         sketch = document.getElementById("sketch");
         context = sketch.getContext("2d");
         circle = {'x':25, 'y':sketch.offsetHeight / 2, 'r':25};
-        setInterval(animare, fps);
+        setInterval(animate, fps);
       }
 
       function animate() {
-        context.clearRect (0, 0, sketch.offWidth, sketch.offsetheight);
-        draw_circle(circle.x, circle.y, cirle.r);
+        context.clearRect(0, 0, sketch.offsetWidth, sketch.offsetHeight);
+        draw_circle(circle.x, circle.y, circle.r);
         circle.x = circle.x + dx;
-        if (cicrle.x > sketch.offWidth - dx - circle.r) {
+        if (circle.x > sketch.offsetWidth - dx - circle.r) {
           dx = dx * -1;
-        } else if (circle.x < circle.r -dx){
-
+        } else if (circle.x < circle.r - dx) {
+          dx = dx * -1;
         }
       }
 
-        function draw_circle(x, y, r){
-          context.beginPath();
-          context.arc(50, 40, 40, 0, 2 * Math.PI, true);
-          context.closePath();
-          context.fill();
-        }
-
+      function draw_circle(x, y, r) {
+        context.beginPath();
+        context.arc(x, y, r, 0, 2 * Math.PI, true);
+        context.closePath();
+        context.fill();
+      }
     </script>
   </body>
 </html>
