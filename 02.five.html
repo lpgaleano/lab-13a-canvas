@@ -6,7 +6,7 @@ https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#16
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Five Squares in a Row</title>
 </head>
 <body onload="draw()">
 	<!-- https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#5.0
@@ -37,11 +37,6 @@ https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#16
 				//	2. get the context from your canvas element (which is what we’ll be using to draw)
 
 			// DRAW STUFF HERE!
-			for (var i = 0; i <= 4; i++){
-			// RECTANGLE: https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#12.0
-        		// context.fillRect(x, y, width, height);
-        	context.fillRect(40, 30, 100, 100);
-
 
 			context.fillStyle = "#ff0000";
 			// FILL SHAPES WITH COLORS:
@@ -52,9 +47,17 @@ https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#16
 					// "#0000ff" - BLUE
 					// "#000000" - BLACK
 
+			// find more HEX color codes:
+				// https://color.adobe.com/create
+				// or: https://htmlcolorcodes.com/
 
+				for (var i = 0; i <= 4; i++) {
+					// RECTANGLE: https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#12.0
+		        		// context.fillRect(x, y, width, height);
+		        	context.fillRect((i * 30), 20, 25, 25);
+							context.fillRect((i * 30), 60, 25, 25);
+				}
 		}
-}
 
 	</script>
 

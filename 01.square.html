@@ -1,3 +1,4 @@
+
 <!-- https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#10.0
 https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#16.0
 	—Each shape you create draws on top of all of your previous drawwings.
@@ -6,7 +7,7 @@ https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#16
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Square</title>
 </head>
 <body onload="draw()">
 	<!-- https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#5.0
@@ -27,7 +28,6 @@ https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#16
 
 	</canvas>
 
-
 	<script>
 		function draw() {
 		 	var sketch = document.getElementById('sketch');
@@ -39,19 +39,26 @@ https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#16
 
 			// DRAW STUFF HERE!
 
+			context.fillStyle = "#0BDECC";
+			// FILL SHAPES WITH COLORS:
+			// https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#15.0
+				// context.fillStyle = "#00ff00"
+					// "#ff0000" - RED
+					// "#00ff00" - GREEN
+					// "#0000ff" - BLUE
+					// "#000000" - BLACK
+
+			// find more HEX color codes:
+				// https://color.adobe.com/create
+				// or: https://htmlcolorcodes.com/
+
 			// RECTANGLE: https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#12.0
         		// context.fillRect(x, y, width, height);
-        	context.fillRect(40, 30, 100, 100);
-
-					context.fillStyle = "3CE8E8";
-
-
-
-
+        	context.fillRect(100, 50, 150, 75);
 
 		}
 
 	</script>
 
 </body>
-</html>
+</html
